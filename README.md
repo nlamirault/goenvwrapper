@@ -1,8 +1,47 @@
 goenvwrapper
 ============
 
-Manage Golang virtual environments
+Manage Golang virtual environments.
 
+## Features
+
+* Organizes all of your virtual environments in one place.
+* Wrappers for managing your virtual environments (create, delete, copy).
+* Use a single command to switch between environments.
+
+## Usage
+
+* Load `goenvwrapper.sh`:
+
+```bash
+$ source goenvwrapper.sh
+```
+
+* Creates a virtual environment :
+
+```bash
+$ goenv-make goo
+goenv-make foo
+Go env: /home/nlamirault/.goenvs/foo
+Ready to foo. Run: source /home/nlamirault/.goenvs/foo/bin/activate
+```
+
+* Activate a virtual environment:
+
+```bash
+$ source /home/nlamirault/.goenvs/foo/bin/activate
+(foo) $ echo $GOPATH
+/home/nlamirault/.goenvs/foo
+```
+
+* Delete a virtual environment :
+
+```bash
+$ goenv-delete foo
+$ ls ~/.goenvs/foo
+ls: cannot access /home/nlamirault/.goenvs/foo: No such file or directory
+
+```
 
 ## Support
 
